@@ -366,7 +366,7 @@ async function processConfigs(configs) {
     const expandedList = [];
     
     for (const item of Object.values(grouped)) {
-        const colorsList = Array.from(item.colors).join(', ');
+        const colorsList = Array.from(item.colors)[0] || '標準色';
         const skusList = Array.from(item.skus).join(', ');
         
         const btoOptions = getBtoOptions(item.chip, item.cpu, item.gpu, item.ram_gb);
