@@ -471,7 +471,36 @@ async function processConfigs(configs) {
         }
     }
     
-    return expandedList;
+    // Deduplicate the expanded configs list to merge identical specs
+    const dedupedList = [];
+    const seen = new Set();
+    
+    for (const item of expandedList) {
+        const key = `${item.name}|${item.chip}|${item.cpu}|${item.gpu}|${item.ram_gb}|${item.ssd}|${item.display}|${item.price}`;
+        if (!seen.has(key)) {
+            seen.add(key);
+            dedupedList.push(item);
+        } else {
+            const existing = dedupedList.find(x => 
+                x.name === item.name &&
+                x.chip === item.chip &&
+                x.cpu === item.cpu &&
+                x.gpu === item.gpu &&
+                x.ram_gb === item.ram_gb &&
+                x.ssd === item.ssd &&
+                x.display === item.display &&
+                x.price === item.price
+            );
+            if (existing) {
+                const existingSkus = existing.sku.split(', ');
+                const newSkus = item.sku.split(', ');
+                const combined = Array.from(new Set([...existingSkus, ...newSkus])).join(', ');
+                existing.sku = combined;
+            }
+        }
+    }
+    
+    return dedupedList;
 }
 
 // Generate premium index.html dashboard
