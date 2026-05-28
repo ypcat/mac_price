@@ -308,9 +308,12 @@ function getBtoOptions(chip, cpu, gpu, baseRamGb) {
         }
     } else if (chipLower.includes('max')) {
         if (baseRamGb === 36) {
+            options.push({ ramGb: 64, ramText: "64GB" });
             options.push({ ramGb: 96, ramText: "96GB" });
+            options.push({ ramGb: 128, ramText: "128GB" });
         } else if (baseRamGb === 48) {
             options.push({ ramGb: 64, ramText: "64GB" });
+            options.push({ ramGb: 96, ramText: "96GB" });
             options.push({ ramGb: 128, ramText: "128GB" });
         }
     } else if (chipLower.includes('pro')) {
@@ -399,6 +402,24 @@ async function processConfigs(configs) {
                 const regex = new RegExp(item.ram, 'i');
                 btoUrl = item.store_url.replace(regex, ramText.toLowerCase());
                 
+                let targetCpu = item.cpu;
+                let targetGpu = item.gpu;
+                
+                // Special CPU/GPU upgrades for high-memory configurations of Max chips
+                if (item.chip.toLowerCase().includes('max') && item.ram_gb === 36) {
+                    if (ramGb === 64 || ramGb === 128) {
+                        if (item.name === 'MacBook Pro') {
+                            btoUrl = btoUrl.replace("32-%E6%A0%B8%E5%BF%83-gpu", "40-%E6%A0%B8%E5%BF%83-gpu");
+                            targetGpu = "40 核心";
+                        } else if (item.name === 'Mac Studio') {
+                            btoUrl = btoUrl.replace("14-%E6%A0%B8%E5%BF%83-cpu", "16-%E6%A0%B8%E5%BF%83-cpu");
+                            btoUrl = btoUrl.replace("32-%E6%A0%B8%E5%BF%83-gpu", "40-%E6%A0%B8%E5%BF%83-gpu");
+                            targetCpu = "16 核心";
+                            targetGpu = "40 核心";
+                        }
+                    }
+                }
+                
                 console.log(`[VERIFY] Validating BTO configuration URL: ${item.name} (${item.chip}, ${ramText})...`);
                 
                 try {
@@ -429,8 +450,8 @@ async function processConfigs(configs) {
                         sku: `${skusList.split(', ')[0] || 'CTO'}/BTO-${ramText}`,
                         name: item.name,
                         chip: item.chip,
-                        cpu: item.cpu,
-                        gpu: item.gpu,
+                        cpu: targetCpu,
+                        gpu: targetGpu,
                         ram: ramText,
                         ram_gb: ramGb,
                         ssd: item.ssd,
