@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple 台灣 Mac 規格比較與性價比分析</title>
+    <!-- Outfit Font & Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 28, 45, 0.45);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-glow: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --accent-glow-orange: linear-gradient(135deg, #ff9f43 0%, #ff5252 100%);
+            --accent-glow-purple: linear-gradient(135deg, #b33771 0%, #6d214f 100%);
+            --text-primary: #ffffff;
+            --text-secondary: #8b9bb4;
+            --btn-bg: rgba(255, 255, 255, 0.05);
+            --btn-hover: rgba(255, 255, 255, 0.15);
+            --glow-color: rgba(0, 242, 254, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #8b9bb4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            font-weight: 400;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 24px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.3);
+            box-shadow: 0 15px 35px var(--glow-color);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-glow);
+        }
+
+        .stat-card.orange::before {
+            background: var(--accent-glow-orange);
+        }
+
+        .stat-card.purple::before {
+            background: var(--accent-glow-purple);
+        }
+
+        .stat-card h3 {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-card .desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Filter Controls */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            background: var(--btn-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            backdrop-filter: blur(5px);
+        }
+
+        .filter-tab:hover {
+            background: var(--btn-hover);
+            color: var(--text-primary);
+        }
+
+        .filter-tab.active {
+            background: var(--accent-glow);
+            color: #0b0f19;
+            border-color: transparent;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+            font-weight: 700;
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 12px 18px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: rgba(0, 242, 254, 0.5);
+            box-shadow: 0 0 15px var(--glow-color);
+        }
+
+        /* Table & Dashboard Styling */
+        .table-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            overflow-x: auto;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--card-border);
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+
+        th:hover {
+            color: var(--text-primary);
+        }
+
+        th.sort-asc::after {
+            content: " ↑";
+            color: #00f2fe;
+        }
+
+        th.sort-desc::after {
+            content: " ↓";
+            color: #00f2fe;
+        }
+
+        td {
+            padding: 6px 10px;
+            font-size: 0.82rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        tr {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        tr:hover td {
+            background-color: rgba(0, 242, 254, 0.08) !important;
+        }
+
+        .chip-badge {
+            background: rgba(0, 242, 254, 0.1);
+            color: #00f2fe;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .chip-badge.pro {
+            background: rgba(162, 114, 254, 0.1);
+            color: #b580ff;
+        }
+
+        .chip-badge.max {
+            background: rgba(255, 159, 67, 0.1);
+            color: #ff9f43;
+        }
+
+        .chip-badge.ultra {
+            background: rgba(255, 82, 82, 0.1);
+            color: #ff5252;
+        }
+
+        .price-text {
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .val-metric {
+            color: #10ac84;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .ship-text {
+            font-size: 0.78rem;
+            color: #2ecc71;
+            background: rgba(46, 204, 113, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            max-width: 110px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .empty-state {
+            display: none;
+            padding: 60px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Custom Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Apple 台灣 Mac 規格與性價比分析</h1>
+            <p>整合 Apple 台灣官方線上商店目前所有在售零售機型配置，提供 100% 官方直營可訂購之規格比價，並提供直達官網商店購買連結，預設依「每 GB RAM 價格」性價比排序。</p>
+        </header>
+
+        <!-- Dynamic Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>已上架機型總數</h3>
+                <div class="value" id="stat-total">-</div>
+                <div class="desc">涵蓋 Air, Pro, mini, iMac, Studio 全系列</div>
+            </div>
+            <div class="stat-card orange">
+                <h3>最高價值機型 (低 NT$/GB)</h3>
+                <div class="value" id="stat-best-val" style="font-size: 1.15rem; margin-top: 8px;">-</div>
+                <div class="desc" id="stat-best-val-price">-</div>
+            </div>
+            <div class="stat-card purple">
+                <h3>入門最低入手價</h3>
+                <div class="value" id="stat-cheapest">-</div>
+                <div class="desc" id="stat-cheapest-name">-</div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="filterCategory('All')">全部顯示</button>
+                <button class="filter-tab" onclick="filterCategory('MacBook Air')">MacBook Air</button>
+                <button class="filter-tab" onclick="filterCategory('MacBook Pro')">MacBook Pro</button>
+                <button class="filter-tab" onclick="filterCategory('iMac')">iMac</button>
+                <button class="filter-tab" onclick="filterCategory('Mac mini')">Mac mini</button>
+                <button class="filter-tab" onclick="filterCategory('Mac Studio')">Mac Studio</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="搜尋處理器、記憶體、顏色、SKU..." oninput="handleSearch()">
+            </div>
+        </div>
+
+        <!-- Interactive Table Container -->
+        <div class="table-container">
+            <table id="mac-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">產品型號</th>
+                        <th onclick="sortTable(1)">晶片</th>
+                        <th onclick="sortTable(2)">CPU (核)</th>
+                        <th onclick="sortTable(3)">GPU (核)</th>
+                        <th onclick="sortTable(4)">記憶體 (GB)</th>
+                        <th onclick="sortTable(5)">儲存空間 (GB)</th>
+                        <th onclick="sortTable(6)">螢幕尺寸 (吋)</th>
+                        <th onclick="sortTable(7)">價格 (k NT$)</th>
+                        <th onclick="sortTable(8)">每 GB RAM 價格 (k NT$)</th>
+                        <th onclick="sortTable(9)">出貨時間</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Javascript will render configurations here -->
+                </tbody>
+            </table>
+            <div class="empty-state" id="empty-state">沒有找到符合搜尋條件的機型配置。</div>
+        </div>
+
+        <footer>
+            <p>數據為 Apple Store 台灣官方即時自動爬取分析成果。最後更新時間：/* DATE_PLACEHOLDER */</p>
+        </footer>
+    </div>
+
+    <!-- Data & Interactions JavaScript -->
+    <script>
+        const macData = /* DATA_PLACEHOLDER */;
+        let currentFilter = 'All';
+        let searchQuery = '';
+        let sortColumn = 8; // Default sort by price/gb ram
+        let sortAsc = true;
+
+        // Render functions
+        function renderTable() {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+
+            let filtered = macData.filter(item => {
+                const matchesCat = currentFilter === 'All' || item.name === currentFilter;
+                const searchString = `${item.name} ${item.chip} ${item.cpu} ${item.gpu} ${item.ram} ${item.ssd} ${item.display} ${item.color} ${item.sku}`.toLowerCase();
+                const matchesSearch = searchString.includes(searchQuery.toLowerCase());
+                return matchesCat && matchesSearch;
+            });
+
+            // Sorting logic
+            filtered.sort((a, b) => {
+                let valA, valB;
+                switch(sortColumn) {
+                    case 0: valA = a.name; valB = b.name; break;
+                    case 1: valA = a.chip; valB = b.chip; break;
+                    case 2: valA = parseInt(a.cpu) || 0; valB = parseInt(b.cpu) || 0; break;
+                    case 3: valA = parseInt(a.gpu) || 0; valB = parseInt(b.gpu) || 0; break;
+                    case 4: valA = a.ram_gb; valB = b.ram_gb; break;
+                    case 5: 
+                        const getSsdGb = (s) => {
+                            if (s.includes("TB")) return parseFloat(s) * 1024;
+                            return parseFloat(s) || 0;
+                        };
+                        valA = getSsdGb(a.ssd); valB = getSsdGb(b.ssd);
+                        break;
+                    case 6:
+                        const parseDisplay = (d) => {
+                            if (!d || d.includes("無") || d.includes("外接")) return 0;
+                            const match = d.match(/(\d+(?:\.\d+)?)/);
+                            return match ? parseFloat(match[1]) : 0;
+                        };
+                        valA = parseDisplay(a.display); valB = parseDisplay(b.display);
+                        break;
+                    case 7: valA = a.price || 0; valB = b.price || 0; break;
+                    case 8: valA = a.price_per_gb_ram || 0; valB = b.price_per_gb_ram || 0; break;
+                    case 9: valA = a.shipTime || ''; valB = b.shipTime || ''; break;
+                }
+
+                if (valA < valB) return sortAsc ? -1 : 1;
+                if (valA > valB) return sortAsc ? 1 : -1;
+                return 0;
+            });
+
+            if (filtered.length === 0) {
+                document.getElementById('empty-state').style.display = 'block';
+            } else {
+                document.getElementById('empty-state').style.display = 'none';
+            }
+
+            filtered.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = 'clickable-row';
+                tr.onclick = () => window.open(item.store_url, '_blank');
+                
+                // Add Chip class badge
+                let chipClass = '';
+                if (item.chip.toLowerCase().includes('pro')) chipClass = 'pro';
+                else if (item.chip.toLowerCase().includes('max')) chipClass = 'max';
+                else if (item.chip.toLowerCase().includes('ultra')) chipClass = 'ultra';
+
+                // Parsing BTO/standard specifications to numeric values
+                const cpuVal = parseInt(item.cpu) || 'N/A';
+                const gpuVal = parseInt(item.gpu) || 'N/A';
+                const ramVal = item.ram_gb;
+                const ssdGb = item.ssd.includes("TB") ? parseFloat(item.ssd) * 1024 : parseFloat(item.ssd);
+                
+                let displayVal = 'N/A';
+                if (item.display && !item.display.includes('外接') && !item.display.includes('無')) {
+                    const match = item.display.match(/(\d+(?:\.\d+)?)/);
+                    if (match) displayVal = parseInt(match[1]);
+                }
+
+                const priceVal = (item.price / 1000).toFixed(1) + 'k';
+                const pricePerGbVal = (item.price_per_gb_ram / 1000).toFixed(2) + 'k';
+
+                tr.innerHTML = `
+                    <td style="font-weight: 700;">${item.name}</td>
+                    <td><span class="chip-badge ${chipClass}">&nbsp;${item.chip}&nbsp;</span></td>
+                    <td>${cpuVal}</td>
+                    <td>${gpuVal}</td>
+                    <td>${ramVal}</td>
+                    <td>${ssdGb}</td>
+                    <td>${displayVal}</td>
+                    <td class="price-text">${priceVal}</td>
+                    <td class="val-metric">${pricePerGbVal}</td>
+                    <td><span class="ship-text" title="${item.shipTime}">${item.shipTime}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Update Sort Headers
+            const headers = document.querySelectorAll('th');
+            headers.forEach((th, idx) => {
+                th.className = '';
+                if (idx === sortColumn) {
+                    th.className = sortAsc ? 'sort-asc' : 'sort-desc';
+                }
+            });
+        }
+
+        // Filter handler
+        function filterCategory(category) {
+            currentFilter = category;
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.innerText === category || (category === 'All' && tab.innerText === '全部顯示')) {
+                    tab.classList.add('active');
+                }
+            });
+            renderTable();
+        }
+
+        // Search handler
+        function handleSearch() {
+            searchQuery = document.getElementById('search-input').value;
+            renderTable();
+        }
+
+        // Sorting trigger
+        function sortTable(colIndex) {
+            if (sortColumn === colIndex) {
+                sortAsc = !sortAsc;
+            } else {
+                sortColumn = colIndex;
+                sortAsc = true;
+            }
+            renderTable();
+        }
+
+        // Stats card computations
+        function calculateStats() {
+            document.getElementById('stat-total').innerText = macData.length + ' 種規格';
+
+            // Cheapest model
+            const cheapest = [...macData].sort((a,b) => a.price - b.price)[0];
+            document.getElementById('stat-cheapest').innerText = 'NT$ ' + cheapest.price.toLocaleString();
+            document.getElementById('stat-cheapest-name').innerText = `${cheapest.name} (${cheapest.chip}, ${cheapest.ram}/${cheapest.ssd})`;
+
+            // Best value model (lowest price/gb ram)
+            const bestValue = [...macData].sort((a,b) => a.price_per_gb_ram - b.price_per_gb_ram)[0];
+            document.getElementById('stat-best-val').innerText = bestValue.name + ' (' + bestValue.chip + ', ' + bestValue.ram + ')';
+            document.getElementById('stat-best-val-price').innerText = `性價比首選：NT$ ${bestValue.price_per_gb_ram.toLocaleString()} / GB RAM`;
+        }
+
+        // Initialize
+        calculateStats();
+        renderTable();
+    </script>
+</body>
+</html>
