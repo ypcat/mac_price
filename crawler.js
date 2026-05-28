@@ -477,7 +477,7 @@ async function processConfigs(configs) {
 // Generate premium index.html dashboard
 function generateHtml(configs) {
     try {
-        const templatePath = path.join("/home/peilun/mac", "index_template.html");
+        const templatePath = path.join(__dirname, "index_template.html");
         let htmlContent = fs.readFileSync(templatePath, 'utf8');
         
         // Replace placeholders
@@ -485,7 +485,7 @@ function generateHtml(configs) {
         htmlContent = htmlContent.replace('/* DATE_PLACEHOLDER */', `"${dateStr}"`);
         htmlContent = htmlContent.replace('/* DATA_PLACEHOLDER */', JSON.stringify(configs, null, 2));
         
-        const outputPath = path.join("/home/peilun/mac", "index.html");
+        const outputPath = path.join(__dirname, "index.html");
         fs.writeFileSync(outputPath, htmlContent, 'utf8');
         console.log(`[SUCCESS] Generated sorting HTML dashboard page at: ${outputPath}`);
     } catch (err) {
@@ -543,7 +543,7 @@ async function run() {
     console.log(`[SUCCESS] Verified and expanded into ${processedConfigs.length} configurations!`);
     
     // Save to JSON
-    const jsonPath = path.join("/home/peilun/mac", "mac_configs.json");
+    const jsonPath = path.join(__dirname, "mac_configs.json");
     fs.writeFileSync(jsonPath, JSON.stringify(processedConfigs, null, 2), 'utf8');
     console.log(`[SUCCESS] Saved configs JSON file to: ${jsonPath}`);
     
