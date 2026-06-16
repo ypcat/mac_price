@@ -1,6 +1,6 @@
 [
   {
-    "sku": "MDHE4TA/A, MDH74TA/A, MDHH4TA/A, MDHA4TA/A",
+    "sku": "MDH74TA/A, MDHH4TA/A, MDHA4TA/A, MDHE4TA/A",
     "name": "MacBook Air",
     "chip": "M5",
     "cpu": "10 核心",
@@ -9,14 +9,14 @@
     "ram_gb": 16,
     "ssd": "512GB",
     "display": "13 吋",
-    "color": "午夜色",
+    "color": "銀色",
     "price": 35900,
     "price_per_gb_ram": 2243.75,
     "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-air/13-%E5%90%8B-%E5%8D%88%E5%A4%9C%E8%89%B2-m5-%E6%99%B6%E7%89%87-10-%E6%A0%B8%E5%BF%83-cpu-8-%E6%A0%B8%E5%BF%83-gpu-16gb-%E8%A8%98%E6%86%B6%E9%AB%94-512gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-air/13-%E5%90%8B-silver-m5-%E6%99%B6%E7%89%87-10-%E6%A0%B8%E5%BF%83-cpu-8-%E6%A0%B8%E5%BF%83-gpu-16gb-%E8%A8%98%E6%86%B6%E9%AB%94-512gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MDVH4TA/A, MDVQ4TA/A, MDV94TA/A, MDVD4TA/A",
+    "sku": "MDVH4TA/A, MDV94TA/A, MDVQ4TA/A, MDVD4TA/A",
     "name": "MacBook Air",
     "chip": "M5",
     "cpu": "10 核心",
@@ -62,54 +62,6 @@
     "price_per_gb_ram": 1778.13,
     "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
     "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-air/15-%E5%90%8B-%E5%8D%88%E5%A4%9C%E8%89%B2-m5-%E6%99%B6%E7%89%87-10-%E6%A0%B8%E5%BF%83-cpu-10-%E6%A0%B8%E5%BF%83-gpu-32gb-%E8%A8%98%E6%86%B6%E9%AB%94-512gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
-  },
-  {
-    "sku": "MGDQ4TA/A, MGDU4TA/A",
-    "name": "MacBook Pro",
-    "chip": "M5 Max",
-    "cpu": "18 核心",
-    "gpu": "32 核心",
-    "ram": "36GB",
-    "ram_gb": 36,
-    "ssd": "2TB",
-    "display": "14 吋",
-    "color": "銀色",
-    "price": 119900,
-    "price_per_gb_ram": 3330.56,
-    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-32-%E6%A0%B8%E5%BF%83-gpu-36gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
-  },
-  {
-    "sku": "MGDQ4TA/A/BTO-64GB",
-    "name": "MacBook Pro",
-    "chip": "M5 Max",
-    "cpu": "18 核心",
-    "gpu": "40 核心",
-    "ram": "64GB",
-    "ram_gb": 64,
-    "ssd": "2TB",
-    "display": "14 吋",
-    "color": "銀色",
-    "price": 144400,
-    "price_per_gb_ram": 2256.25,
-    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-64gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
-  },
-  {
-    "sku": "MGDQ4TA/A/BTO-128GB",
-    "name": "MacBook Pro",
-    "chip": "M5 Max",
-    "cpu": "18 核心",
-    "gpu": "40 核心",
-    "ram": "128GB",
-    "ram_gb": 128,
-    "ssd": "2TB",
-    "display": "14 吋",
-    "color": "銀色",
-    "price": 172400,
-    "price_per_gb_ram": 1346.88,
-    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-128gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
     "sku": "MDE14TA/A, MEQJ4TA/A, MDE54TA/A",
@@ -160,38 +112,6 @@
     "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-%E6%99%B6%E7%89%87-10-%E6%A0%B8%E5%BF%83-cpu-10-%E6%A0%B8%E5%BF%83-gpu-32gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MGDR4TA/A, MGDN4TA/A",
-    "name": "MacBook Pro",
-    "chip": "M5 Pro",
-    "cpu": "15 核心",
-    "gpu": "16 核心",
-    "ram": "24GB",
-    "ram_gb": 24,
-    "ssd": "1TB",
-    "display": "14 吋",
-    "color": "太空黑色",
-    "price": 74900,
-    "price_per_gb_ram": 3120.83,
-    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-pro-%E6%99%B6%E7%89%87-15-%E6%A0%B8%E5%BF%83-cpu-16-%E6%A0%B8%E5%BF%83-gpu-24gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
-  },
-  {
-    "sku": "MGDR4TA/A/BTO-48GB",
-    "name": "MacBook Pro",
-    "chip": "M5 Pro",
-    "cpu": "15 核心",
-    "gpu": "16 核心",
-    "ram": "48GB",
-    "ram_gb": 48,
-    "ssd": "1TB",
-    "display": "14 吋",
-    "color": "太空黑色",
-    "price": 88900,
-    "price_per_gb_ram": 1852.08,
-    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-pro-%E6%99%B6%E7%89%87-15-%E6%A0%B8%E5%BF%83-cpu-16-%E6%A0%B8%E5%BF%83-gpu-48gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
-  },
-  {
     "sku": "MGED4TA/A, MGE74TA/A",
     "name": "MacBook Pro",
     "chip": "M5 Max",
@@ -208,7 +128,7 @@
     "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/16-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-32-%E6%A0%B8%E5%BF%83-gpu-36gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MGED4TA/A/BTO-64GB, MGEE4TA/A/BTO-64GB",
+    "sku": "MGED4TA/A/BTO-64GB, MGE94TA/A/BTO-64GB",
     "name": "MacBook Pro",
     "chip": "M5 Max",
     "cpu": "18 核心",
@@ -224,7 +144,7 @@
     "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/16-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-64gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MGED4TA/A/BTO-128GB, MGEE4TA/A/BTO-128GB",
+    "sku": "MGED4TA/A/BTO-128GB, MGE94TA/A/BTO-128GB",
     "name": "MacBook Pro",
     "chip": "M5 Max",
     "cpu": "18 核心",
@@ -272,7 +192,39 @@
     "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/16-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-pro-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-20-%E6%A0%B8%E5%BF%83-gpu-48gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MGEE4TA/A, MGE94TA/A",
+    "sku": "MGDN4TA/A, MGDR4TA/A",
+    "name": "MacBook Pro",
+    "chip": "M5 Pro",
+    "cpu": "15 核心",
+    "gpu": "16 核心",
+    "ram": "24GB",
+    "ram_gb": 24,
+    "ssd": "1TB",
+    "display": "14 吋",
+    "color": "銀色",
+    "price": 74900,
+    "price_per_gb_ram": 3120.83,
+    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-pro-%E6%99%B6%E7%89%87-15-%E6%A0%B8%E5%BF%83-cpu-16-%E6%A0%B8%E5%BF%83-gpu-24gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+  },
+  {
+    "sku": "MGDN4TA/A/BTO-48GB",
+    "name": "MacBook Pro",
+    "chip": "M5 Pro",
+    "cpu": "15 核心",
+    "gpu": "16 核心",
+    "ram": "48GB",
+    "ram_gb": 48,
+    "ssd": "1TB",
+    "display": "14 吋",
+    "color": "銀色",
+    "price": 88900,
+    "price_per_gb_ram": 1852.08,
+    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-pro-%E6%99%B6%E7%89%87-15-%E6%A0%B8%E5%BF%83-cpu-16-%E6%A0%B8%E5%BF%83-gpu-48gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+  },
+  {
+    "sku": "MGE94TA/A, MGEE4TA/A",
     "name": "MacBook Pro",
     "chip": "M5 Max",
     "cpu": "18 核心",
@@ -281,14 +233,62 @@
     "ram_gb": 48,
     "ssd": "2TB",
     "display": "16 吋",
-    "color": "太空黑色",
+    "color": "銀色",
     "price": 147900,
     "price_per_gb_ram": 3081.25,
     "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/16-%E5%90%8B-space-black-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-48gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/16-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-48gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MWUG3TA/A, MWUC3TA/A, MWUF3TA/A, MWUE3TA/A",
+    "sku": "MGDQ4TA/A, MGDU4TA/A",
+    "name": "MacBook Pro",
+    "chip": "M5 Max",
+    "cpu": "18 核心",
+    "gpu": "32 核心",
+    "ram": "36GB",
+    "ram_gb": 36,
+    "ssd": "2TB",
+    "display": "14 吋",
+    "color": "銀色",
+    "price": 119900,
+    "price_per_gb_ram": 3330.56,
+    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-32-%E6%A0%B8%E5%BF%83-gpu-36gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+  },
+  {
+    "sku": "MGDQ4TA/A/BTO-64GB",
+    "name": "MacBook Pro",
+    "chip": "M5 Max",
+    "cpu": "18 核心",
+    "gpu": "40 核心",
+    "ram": "64GB",
+    "ram_gb": 64,
+    "ssd": "2TB",
+    "display": "14 吋",
+    "color": "銀色",
+    "price": 144400,
+    "price_per_gb_ram": 2256.25,
+    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-64gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+  },
+  {
+    "sku": "MGDQ4TA/A/BTO-128GB",
+    "name": "MacBook Pro",
+    "chip": "M5 Max",
+    "cpu": "18 核心",
+    "gpu": "40 核心",
+    "ram": "128GB",
+    "ram_gb": 128,
+    "ssd": "2TB",
+    "display": "14 吋",
+    "color": "銀色",
+    "price": 172400,
+    "price_per_gb_ram": 1346.88,
+    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/macbook-pro/14-%E5%90%8B-silver-%E6%A8%99%E6%BA%96%E9%A1%AF%E7%A4%BA%E5%99%A8-apple-m5-max-%E6%99%B6%E7%89%87-18-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-128gb-%E8%A8%98%E6%86%B6%E9%AB%94-2tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+  },
+  {
+    "sku": "MWUF3TA/A, MWUE3TA/A, MWUG3TA/A, MWUC3TA/A",
     "name": "iMac",
     "chip": "M4",
     "cpu": "8 核心",
@@ -297,14 +297,14 @@
     "ram_gb": 16,
     "ssd": "256GB",
     "display": "24 吋",
-    "color": "粉紅色",
+    "color": "藍色",
     "price": 42900,
     "price_per_gb_ram": 2681.25,
     "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/imac/24-%E5%90%8B-%E7%B2%89%E7%B4%85%E8%89%B2-m4-%E6%99%B6%E7%89%87-8-%E6%A0%B8%E5%BF%83-cpu-8-%E6%A0%B8%E5%BF%83-gpu-16gb-%E8%A8%98%E6%86%B6%E9%AB%94-256gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE-%E7%AB%8B%E6%9E%B6"
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/imac/24-%E5%90%8B-blue-m4-%E6%99%B6%E7%89%87-8-%E6%A0%B8%E5%BF%83-cpu-8-%E6%A0%B8%E5%BF%83-gpu-16gb-%E8%A8%98%E6%86%B6%E9%AB%94-256gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE-%E7%AB%8B%E6%9E%B6"
   },
   {
-    "sku": "MWUG3TA/A/BTO-24GB",
+    "sku": "MWUF3TA/A/BTO-24GB",
     "name": "iMac",
     "chip": "M4",
     "cpu": "8 核心",
@@ -313,14 +313,14 @@
     "ram_gb": 24,
     "ssd": "256GB",
     "display": "24 吋",
-    "color": "粉紅色",
+    "color": "藍色",
     "price": 49900,
     "price_per_gb_ram": 2079.17,
     "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/imac/24-%E5%90%8B-%E7%B2%89%E7%B4%85%E8%89%B2-m4-%E6%99%B6%E7%89%87-8-%E6%A0%B8%E5%BF%83-cpu-8-%E6%A0%B8%E5%BF%83-gpu-24gb-%E8%A8%98%E6%86%B6%E9%AB%94-256gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE-%E7%AB%8B%E6%9E%B6"
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/imac/24-%E5%90%8B-blue-m4-%E6%99%B6%E7%89%87-8-%E6%A0%B8%E5%BF%83-cpu-8-%E6%A0%B8%E5%BF%83-gpu-24gb-%E8%A8%98%E6%86%B6%E9%AB%94-256gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE-%E7%AB%8B%E6%9E%B6"
   },
   {
-    "sku": "MWV43TA/A, MWUU3TA/A, MWUY3TA/A, MWV13TA/A",
+    "sku": "MWV43TA/A, MWUY3TA/A, MWV13TA/A, MWUU3TA/A",
     "name": "iMac",
     "chip": "M4",
     "cpu": "10 核心",
@@ -416,22 +416,6 @@
     "store_url": "https://www.apple.com/tw/shop/buy-mac/mac-mini/m4-pro-%E6%99%B6%E7%89%87-12-%E6%A0%B8%E5%BF%83-cpu-16-%E6%A0%B8%E5%BF%83-gpu-48gb-%E8%A8%98%E6%86%B6%E9%AB%94-512gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   },
   {
-    "sku": "MU973TA/A",
-    "name": "Mac Studio",
-    "chip": "M3 Ultra",
-    "cpu": "28 核心",
-    "gpu": "60 核心",
-    "ram": "96GB",
-    "ram_gb": 96,
-    "ssd": "1TB",
-    "display": "無 (外接)",
-    "color": "標準色",
-    "price": 137900,
-    "price_per_gb_ram": 1436.46,
-    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
-    "store_url": "https://www.apple.com/tw/shop/buy-mac/mac-studio/m3-ultra-%E6%99%B6%E7%89%87-28-%E6%A0%B8%E5%BF%83-cpu-60-%E6%A0%B8%E5%BF%83-gpu-96gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
-  },
-  {
     "sku": "MU963TA/A",
     "name": "Mac Studio",
     "chip": "M4 Max",
@@ -462,5 +446,21 @@
     "price_per_gb_ram": 1443.75,
     "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
     "store_url": "https://www.apple.com/tw/shop/buy-mac/mac-studio/m4-max-%E6%99%B6%E7%89%87-16-%E6%A0%B8%E5%BF%83-cpu-40-%E6%A0%B8%E5%BF%83-gpu-64gb-%E8%A8%98%E6%86%B6%E9%AB%94-512gb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
+  },
+  {
+    "sku": "MU973TA/A",
+    "name": "Mac Studio",
+    "chip": "M3 Ultra",
+    "cpu": "28 核心",
+    "gpu": "60 核心",
+    "ram": "96GB",
+    "ram_gb": 96,
+    "ssd": "1TB",
+    "display": "無 (外接)",
+    "color": "標準色",
+    "price": 137900,
+    "price_per_gb_ram": 1436.46,
+    "shipTime": "通常於 出貨後  5 個工作天內送達 出貨",
+    "store_url": "https://www.apple.com/tw/shop/buy-mac/mac-studio/m3-ultra-%E6%99%B6%E7%89%87-28-%E6%A0%B8%E5%BF%83-cpu-60-%E6%A0%B8%E5%BF%83-gpu-96gb-%E8%A8%98%E6%86%B6%E9%AB%94-1tb-%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE"
   }
 ]
