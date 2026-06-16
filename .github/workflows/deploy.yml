@@ -2,7 +2,7 @@ name: Daily Mac Price Scraper & Deploy
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Run daily at 00:00 UTC (08:00 Taipei time)
+    - cron: '0 0 0 * *' # Run weekly
   workflow_dispatch: # Allow manual trigger
   push:
     branches:
