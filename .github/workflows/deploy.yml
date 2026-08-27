@@ -23,6 +23,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,10 +33,14 @@ jobs:
         with:
           node-version: '20'
 
+      # A plain push only redeploys the committed data; re-scraping Apple is
+      # reserved for the schedule and manual runs to stay inside the free quota.
       - name: Run Crawler
+        if: github.event_name != 'push'
         run: node crawler.js
 
       - name: Commit & Push updated data
+        if: github.event_name != 'push'
         run: |
           git config --global user.name "Antigravity Agent"
           git config --global user.email "antigravity-agent-bot@users.noreply.github.com"

@@ -5,7 +5,9 @@ A fully-automated, live-validated crawler and dashboard for comparing specificat
 ## Features
 
 - **Live Validation Pipeline**: Automatically generates custom configure-to-order (BTO/CTO) URLs and sends request to Apple servers. Only valid configurations (returning HTTP 200 OK) are included, and invalid configurations (redirecting via HTTP 301/302) are dynamically excluded.
-- **Smart Spec Upgrades**: Handles complex BTO dependency rules (e.g., upgrading M5 Max from 36GB to 64GB/128GB RAM or M4 Max from 36GB to 64GB RAM automatically upgrades GPU and CPU core counts in the constructed BTO URLs).
+- **Live Option Discovery**: Memory capacities and CPU/GPU core bins are read from Apple's own `PRODUCT_SELECTION_BOOTSTRAP` on each buy page, so newly offered tiers (e.g. Mac mini M5 Pro 64GB, Mac Studio M5 Ultra 256GB) appear without code changes.
+- **Self-Correcting Specs**: Every configuration's chip, core counts, memory, and storage are read back from the `<title>` Apple actually serves, so no spec is ever inferred from the requested URL.
+- **Parallel Crawl**: All requests run through a concurrency pool with gzip transfer, completing a full crawl in seconds rather than minutes (tune with `CRAWLER_CONCURRENCY`).
 - **Color Merge & Deduplication**: Groups identical configurations across colors, simplifying choices and cleanly showcasing all available color variants in a single entry.
 - **Dynamic Live Shipping Data**: Pulls actual local availability and shipping windows via the Apple Availability SBA API and calculates readable shipping ranges.
 - **Premium Compact Dashboard**: Displays configuration spec tables in a high-density, professional layout with point-and-click row direct links to pre-selected configurations on the official Apple online store.
